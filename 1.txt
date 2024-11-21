@@ -1,0 +1,66 @@
+Collecting matrix-nio
+  Downloading matrix_nio-0.20.2-py3-none-any.whl (173 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 174.0/174.0 KB 769.3 kB/s eta 0:00:00
+Collecting h2<5.0.0,>=4.0.0
+  Using cached h2-4.1.0-py3-none-any.whl (57 kB)
+Collecting aiohttp<4.0.0,>=3.8.3
+  Using cached aiohttp-3.8.6-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (987 kB)
+Collecting pycryptodome<4.0.0,>=3.10.1
+  Using cached pycryptodome-3.21.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+Collecting aiohttp-socks<0.8.0,>=0.7.0
+  Downloading aiohttp_socks-0.7.1-py3-none-any.whl (9.3 kB)
+Collecting unpaddedbase64<3.0.0,>=2.1.0
+  Using cached unpaddedbase64-2.1.0-py3-none-any.whl (6.1 kB)
+Collecting aiofiles<24.0.0,>=23.1.0
+  Using cached aiofiles-23.2.1-py3-none-any.whl (15 kB)
+Collecting logbook<2.0.0,>=1.5.3
+  Using cached Logbook-1.6.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (447 kB)
+Collecting future<0.19.0,>=0.18.2
+  Using cached future-0.18.3.tar.gz (840 kB)
+  Preparing metadata (setup.py) ... done
+Collecting jsonschema<5.0.0,>=4.4.0
+  Downloading jsonschema-4.17.3-py3-none-any.whl (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.4/90.4 KB 2.0 MB/s eta 0:00:00
+Collecting h11<0.15.0,>=0.14.0
+  Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Collecting attrs>=17.3.0
+  Using cached attrs-24.2.0-py3-none-any.whl (63 kB)
+Collecting async-timeout<5.0,>=4.0.0a3
+  Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting typing-extensions>=3.7.4
+  Using cached typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Collecting frozenlist>=1.1.1
+  Using cached frozenlist-1.3.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (148 kB)
+Collecting yarl<2.0,>=1.0
+  Using cached yarl-1.9.4-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (289 kB)
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting multidict<7.0,>=4.5
+  Using cached multidict-6.0.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (99 kB)
+Collecting asynctest==0.13.0
+  Using cached asynctest-0.13.0-py3-none-any.whl (26 kB)
+Collecting charset-normalizer<4.0,>=2.0
+  Using cached charset_normalizer-3.4.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (138 kB)
+Collecting python-socks[asyncio]<3.0.0,>=2.0.0
+  Downloading python_socks-2.5.3-py3-none-any.whl (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.9/52.9 KB 11.7 MB/s eta 0:00:00
+Collecting hyperframe<7,>=6.0
+  Using cached hyperframe-6.0.1-py3-none-any.whl (12 kB)
+Collecting hpack<5,>=4.0
+  Using cached hpack-4.0.0-py3-none-any.whl (32 kB)
+Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0
+  Using cached pyrsistent-0.19.3-py3-none-any.whl (57 kB)
+Collecting importlib-resources>=1.4.0
+  Downloading importlib_resources-5.12.0-py3-none-any.whl (36 kB)
+Collecting importlib-metadata
+  Using cached importlib_metadata-6.7.0-py3-none-any.whl (22 kB)
+Collecting pkgutil-resolve-name>=1.3.10
+  Downloading pkgutil_resolve_name-1.3.10-py3-none-any.whl (4.7 kB)
+Collecting zipp>=3.1.0
+  Using cached zipp-3.15.0-py3-none-any.whl (6.8 kB)
+Collecting idna>=2.0
+  Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using legacy 'setup.py install' for future, since package 'wheel' is not installed.
+Installing collected packages: python-socks, zipp, unpaddedbase64, typing-extensions, pyrsistent, pycryptodome, pkgutil-resolve-name, multidict, logbook, idna, hyperframe, hpack, future, frozenlist, charset-normalizer, asynctest, aiofiles, yarl, importlib-resources, importlib-metadata, h2, h11, async-timeout, aiosignal, attrs, jsonschema, aiohttp, aiohttp-socks, matrix-nio
+  Running setup.py install for future ... done
+Successfully installed aiofiles-23.2.1 aiohttp-3.8.6 aiohttp-socks-0.7.1 aiosignal-1.3.1 async-timeout-4.0.3 asynctest-0.13.0 attrs-24.2.0 charset-normalizer-3.4.0 frozenlist-1.3.3 future-0.18.3 h11-0.14.0 h2-4.1.0 hpack-4.0.0 hyperframe-6.0.1 idna-3.10 importlib-metadata-6.7.0 importlib-resources-5.12.0 jsonschema-4.17.3 logbook-1.6.0 matrix-nio-0.20.2 multidict-6.0.5 pkgutil-resolve-name-1.3.10 pycryptodome-3.21.0 pyrsistent-0.19.3 python-socks-2.5.3 typing-extensions-4.7.1 unpaddedbase64-2.1.0 yarl-1.9.4 zipp-3.15.0
