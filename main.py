@@ -5,11 +5,13 @@ from typing import Dict
 import logging
 
 import asyncio
+from datetime import datetime
 
 from nio import AsyncClient, MatrixRoom, RoomMessageText, AsyncClientConfig, AccountDataEvent
 from nio import ErrorResponse
 import bot
 import os
+from bot.odoo_instance import OdooInstance
 
 MATRIX_HOMESERVER = os.environ["MATRIX_HOMESERVER"]
 MATRIX_USER = os.environ["MATRIX_USER"]
@@ -19,22 +21,29 @@ bot.netsvc.init_logger()
 
 _logger = logging.getLogger(__name__)
 
+
 class Bot:
     client: AsyncClient
     room_datas: Dict
 
-    def __init__(self, room_datas: Dict):
-        self.room_datas = room_datas
+    def __init__(self, messaging_data: Dict):
+        self.room_datas = messaging_data["room_datas"]
 
-    def get_last_seen_date(self, room_id):
-        room_data = self.room_datas[room_id]
-        ["last_seen"]
+    def get_last_seen_date(self, room_id) -> datetime:
+        last_seen = self.room_datas[room_id]["last_seen"]
+        return datatime.utcfromtimestamp(last_seen)
 
     async def message_callback(room: MatrixRoom, event: RoomMessageText) -> None:
-        room_data = self.room_datas.get(room.room_id)
-        if not room_data:
+        last_seen_in_odoo = self.get_last_seen_date(room_id)
+        message_date = datetime.utcfromtimestamp(event.source['origin_server_ts'])
 
-        # latest date = datetime.utcfromtimestamp(event.source['origin_server_ts'])
+        if message_date <= last_seen_in_odoo:
+            _logger.debug(f"Ignoring message from {room.display_name} on date {message_date}")
+            return
+
+        # TODO: check if self. ignore it
+
+        # latest date =
         # room id = room.room_id
         print(
             f"Message received in room {room.display_name}\n"
@@ -54,25 +63,28 @@ class Bot:
 
         client.add_event_callback(message_callback, RoomMessageText)
 
-a = False
-
-
-async def account_data_callback(room: MatrixRoom, event: AccountDataEvent) -> None:
-    from pprint import pprint
-    pprint(event)
 
 async def main() -> None:
+    odoo = OdooInstance(bot.tools.config)
+    await odoo.check()
+    init_messaging_data = await odoo.init_messaging()
+
+    bot = Bot(init_messaging_data)
+
+
     # TODO: какие комнаты надо смотреть?
 
     # If you made a new room and haven't joined as that user, you can use
     # await client.join("your-room-id")
 
+    '''
     await client.room_send(
         # Watch out! If you join an old room you'll see lots of old messages
         room_id="!my-fave-room:example.org",
         message_type="m.room.message",
         content={"msgtype": "m.text", "body": "Hello world!"},
     )
+    '''
     await client.sync_forever(timeout=30000)  # milliseconds
 
 
